@@ -1,19 +1,21 @@
-arrNumbers = [7, 3, 5, 8, 2, 9, 4, 15, 6]
+def selectionSort(numbers : list):
+    print(numbers)
+    print()
 
-intLenNumbers = len(arrNumbers)
-i = 0
+    lenNumbers = len(numbers)
+    i = 0
 
-print(arrNumbers)
-print()
+    for i in range(lenNumbers-1):
+        lowValue = numbers[i]
+        lowValuePosition = i
+        j = i + 1
+        for j in range(j, lenNumbers):
+            if (numbers[j] < lowValue):
+                lowValue = numbers[j]
+                lowValuePosition = j
+        numbers[lowValuePosition] = numbers[i]
+        numbers[i] = lowValue
+        print(numbers)
 
-for i in range(intLenNumbers-1):
-    lowValue = arrNumbers[i]
-    lowPosition = i
-    j = i + 1
-    for j in range(j, intLenNumbers):
-        if (arrNumbers[j] < lowValue):
-            lowValue = arrNumbers[j]
-            lowPosition = j
-    arrNumbers[lowPosition] = arrNumbers[i]
-    arrNumbers[i] = lowValue
-    print(arrNumbers)
+
+selectionSort([7, 3, 5, 8, 2, 9, 4, 15, 6])
