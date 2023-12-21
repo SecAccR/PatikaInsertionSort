@@ -17,5 +17,4 @@ def selectionSort(numbers : list):
         numbers[i] = lowValue
         print(numbers)
 
-
-selectionSort([7, 3, 5, 8, 2, 9, 4, 15, 6])
+selectionSort([7, 3, 5, 15, 2, 8, 4, 6, 9])
